@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bg-page text-text-main antialiased font-sans;
+  }
+}
+
+@layer components {
+  /* Replicating previous custom classes using Tailwind */
+  .container {
+    @apply max-w-[1200px] mx-auto px-6;
+  }
+
+  .card {
+    @apply bg-bg-card rounded-xl shadow-sm p-6;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg bg-bg-card border border-border text-text-main font-medium transition-colors text-sm;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white border-primary hover:bg-primary-hover;
+  }
+
+  .btn-danger {
+    @apply bg-red-50 text-danger border-red-200 hover:bg-red-100;
+  }
+
+  .form-group {
+    @apply mb-4;
+  }
+
+  .form-label {
+    @apply block mb-1.5 font-medium text-text-main;
+  }
+
+  .form-input {
+    @apply w-full px-3 py-2.5 border border-border rounded-lg bg-bg-card focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all shadow-sm;
+  }
+
+  .actions {
+    @apply flex gap-2;
+  }
+
+  .btn-icon {
+    @apply p-1.5 rounded-md text-text-muted hover:bg-slate-100 hover:text-primary transition-colors;
+  }
+
+  .btn-icon.danger:hover {
+    @apply text-danger bg-red-50;
+  }
+  
+  .table-wrapper {
+    @apply overflow-x-auto;
+  }
+  
+  table {
+    @apply w-full border-collapse text-left;
+  }
+  
+  th {
+    @apply p-3 border-b border-border font-semibold text-text-muted text-xs uppercase tracking-wider;
+  }
+  
+  td {
+    @apply p-3 border-b border-border;
+  }
+  
+  tr:last-child td {
+    @apply border-b-0;
+  }
+}
